@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Interface controller-PC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        body {
+            height: 100vh;
+        }
+        
+        .akai {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            z-index: -1;
+        }
+        
+        .active {
+            background: black;
+            opacity: .5;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="http://localhost:3000/akai.jpg" class="akai">
+
+    <div style="position: absolute;top: 52.3%;left: 3.3%; width: 93.3%; height: 46.3%;">
+        <div id="1-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 0;"></div>
+        <div id="2-touche" style="position: absolute;height: 62%; width: 3.4%; top:0; left: 4%;"></div>
+        <div id="3-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 6.5%;"></div>
+        <div id="4-touche" style="position: absolute;height: 62%; width: 3.4%; top:0; left: 12%;"></div>
+        <div id="5-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 13.5%;"></div>
+        <div id="6-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 20%;"></div>
+        <div id="7-touche" style="position: absolute;height: 62%; width: 3.4%; top:0; left: 24%;"></div>
+        <div id="8-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 26.5%;"></div>
+        <div id="9-touche" style="position: absolute;height: 62%; width: 3.4%; top:0; left: 31.5%;"></div>
+        <div id="10-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 33%;"></div>
+        <div id="11-touche" style="position: absolute;height: 62%; width: 3.4%; top:0; left: 39%;"></div>
+        <div id="12-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 40%;"></div>
+        <div id="13-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 46.5%;"></div>
+        <div id="14-touche" style="position: absolute;height: 62%; width: 3.4%; top:0; left: 51%;"></div>
+        <div id="15-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 53%;"></div>
+        <div id="16-touche" style="position: absolute;height: 62%; width: 3.4%; top:0; left: 58.5%;"></div>
+        <div id="17-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 59.5%;"></div>
+        <div id="18-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 66.5%;"></div>
+        <div id="19-touche" style="position: absolute;height: 62%; width: 3.4%; top:0; left: 70.5%;"></div>
+        <div id="20-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 73%;"></div>
+        <div id="21-touche" style="position: absolute;height: 62%; width: 3.4%; top:0; left: 78%;"></div>
+        <div id="22-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 79.5%;"></div>
+        <div id="23-touche" style="position: absolute;height: 62%; width: 3.4%; top:0; left: 85.5%;"></div>
+        <div id="24-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; left: 86.2%;"></div>
+        <div id="25-touche" style="position: absolute;height: 38%; width: 6.7%; top:62%; right: .5%;"></div>
+    </div>
+    <div style="position: absolute;top: 6.4%; left: 17.6%;width: 41.7%; height: 35.7%;">
+        <div id="5-pad" style="position: absolute; height: 45%; width: 22%; left: 0; top: 0;"></div>
+        <div id="6-pad" style="position: absolute; height: 45%; width: 22%;left: 26%; top: 0;"></div>
+        <div id="7-pad" style="position: absolute; height: 45%; width: 22%;left: 52.3%; top: 0;"></div>
+        <div id="8-pad" style="position: absolute; height: 45%; width: 22%;left: 78.5%; top: 0;"></div>
+        <div id="1-pad" style="position: absolute; height: 45%; width: 22%;left: 0; bottom: 0;"></div>
+        <div id="2-pad" style="position: absolute; height: 45%; width: 22%;left: 26.3%; bottom: 0;"></div>
+        <div id="3-pad" style="position: absolute; height: 45%; width: 22%;left: 52.3%; bottom: 0;"></div>
+        <div id="4-pad" style="position: absolute; height: 45%; width: 22%;left: 78.6%; bottom: 0;"></div>
+    </div>
+
+    <div class="screen" style="position: absolute; height: 4.9%; width: 8.3%; top: 9.3%; left: 63.4%; text-align: center;">
+        <h3 style="position:absolute;left: 50%; top: 50%;width: 80%; transform: translate(-50%, -50%);"></h3>
+    </div>
+
+    <img id="1-potar" src="http://localhost:3000/potar.png" style="transform: rotate(-140deg); position: absolute; right: 17.3%; top: 18.5%; width: 5.4%;">
+    <img id="2-potar" src="http://localhost:3000/potar.png" style="transform: rotate(-140deg); position: absolute; right: 9.8%; top: 18.5%; width: 5.4%;">
+    <img id="3-potar" src="http://localhost:3000/potar.png" style="transform: rotate(-140deg); position: absolute; right: 17.3%; top: 32.8%; width: 5.4%;">
+    <img id="4-potar" src="http://localhost:3000/potar.png" style="transform: rotate(-140deg); position: absolute; right: 9.8%; top: 32.8%; width: 5.4%;">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        socket.on('touche', function(msg) {
+            document.querySelector('.screen > h3').innerHTML = msg;
+            var num = parseInt(msg.split(" ")[0]);
+            if (num > 15 && num < 24) {
+                document.getElementById(num - 15 + "-pad").classList.value = (msg.split(" ")[1] === "ON") ? "active" : ""
+            } else {
+                document.getElementById(num - 47 + "-touche").classList.value = (msg.split(" ")[1] === "ON") ? "active" : ""
+            }
+        });
+        socket.on('potar', function(msg) {
+            document.querySelector('.screen > h3').innerHTML = msg;
+            var num = parseInt(msg.split(" ")[0]);
+            document.getElementById(num - 47 + "-potar").style.transform = "rotate(" + Math.floor(((msg.split(" ")[1] / 127) * 280) - 140) + "deg)";
+        })
+    </script>
+
+</body>
+
+</html>
